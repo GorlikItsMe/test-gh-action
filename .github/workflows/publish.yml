@@ -1,0 +1,14 @@
+name: Publish
+
+on:
+  push:
+    branches: ["main", "master"]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Publish app somewhere"
+        run: |
+          echo "There will be a command to publish the app"

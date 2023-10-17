@@ -1,0 +1,17 @@
+name: Test
+
+on:
+  push:
+    branches: ["main", "master"]
+  pull_request:
+    branches: ["main", "master"]
+  workflow_call:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Run tests"
+        run: |
+          echo "there are tests. beep boop."
