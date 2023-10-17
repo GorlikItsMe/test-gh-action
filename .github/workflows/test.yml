@@ -1,13 +1,8 @@
 name: Test
 
 on:
-  # push:
-  #   branches-ignore: ["main", "master"]
-  
-  # on commits in branches used in pull requests
-  pull_request_target:
-    types:
-      - synchronize
+  push:
+    branches-ignore: ["main", "master"]
 
   # on pull request create
   pull_request:
