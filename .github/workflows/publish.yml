@@ -5,9 +5,12 @@ on:
     branches: ["main", "master"]
 
 jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+
   publish:
     runs-on: ubuntu-latest
-
+    needs: [test]
     steps:
       - name: "Publish app somewhere"
         run: |
